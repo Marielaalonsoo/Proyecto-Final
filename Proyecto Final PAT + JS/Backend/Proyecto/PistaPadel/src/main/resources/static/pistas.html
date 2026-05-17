@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pistas</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/paginas/pistas.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">
+            <h1>Club de Pádel Comillas</h1>
+        </div>
+
+        <nav class="nav">
+            <a href="index.html">Inicio</a>
+            <a href="pistas.html">Pistas</a>
+            <a href="reservas.html">Reservas</a>
+            <a href="profile.html">Perfil</a>
+            <a href="login.html">Iniciar sesión</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="pagina-titulo">
+            <h2>Nuestras pistas</h2>
+            <p>
+                Consulta las pistas disponibles, sus características y elige la que mejor se adapte a tu reserva.
+            </p>
+        </section>
+
+        <section class="filtros-pistas">
+            <h2>Buscar pista</h2>
+
+            <form id="filtrosPistasForm" class="form-filtros card">
+                <div class="filtros-grid">
+                    <div class="filtro-group">
+                        <label for="tipo">Ubicación</label>
+                        <select id="tipo" name="tipo">
+                            <option value="">Todas</option>
+                            <option value="norte">Norte</option>
+                            <option value="central">Central</option>
+                            <option value="sur">Sur</option>
+                            <option value="este">Este</option>
+                        </select>
+                    </div>
+
+                    <div class="filtro-group">
+                        <label for="estado">Estado</label>
+                        <select id="estado" name="estado">
+                            <option value="">Todas</option>
+                            <option value="true">Activa</option>
+                            <option value="false">Inactiva</option>
+                        </select>
+                    </div>
+
+                    <div class="filtro-group">
+                        <label for="fecha">Fecha</label>
+                        <input type="date" id="fecha" name="fecha">
+                    </div>
+
+                    <div class="filtro-group">
+                        <label for="hora">Hora</label>
+                        <input type="time" id="hora" name="hora">
+                    </div>
+                </div>
+
+                <button type="submit" class="button-primary">Consultar</button>
+            </form>
+        </section>
+
+        <section class="lista-pistas">
+            <h2>Pistas disponibles</h2>
+
+            <div id="pistasGrid" class="pistas-grid">
+                <article class="pista-card">
+                    <img src="https://padelescuelaclub.es/wp-content/uploads/2025/03/pistas-padel-majadahonda.jpg" alt="Pista 1">
+                    <div class="pista-info">
+                        <h3>Pista 1</h3>
+                        <p><strong>Tipo:</strong> Indoor</p>
+                        <p><strong>Ubicación:</strong> Zona norte</p>
+                        <p><strong>Precio:</strong> 18 € / hora</p>
+                        <p><strong>Estado:</strong> Disponible</p>
+                        <a href="reservas.html" class="button-primary">Reservar</a>
+                    </div>
+                </article>
+
+                <article class="pista-card card">
+                    <img src="https://www.porticosport.es/outdoor-court/gallery/Outdoor-Padel-Court-1.webp" alt="Pista 2">
+                    <div class="pista-info">
+                        <h3>Pista 2</h3>
+                        <p><strong>Tipo:</strong> Outdoor</p>
+                        <p><strong>Ubicación:</strong> Zona central</p>
+                        <p><strong>Precio:</strong> 15 € / hora</p>
+                        <p><strong>Estado:</strong> Disponible</p>
+                        <a href="reservas.html" class="button-primary">Reservar</a>
+                    </div>
+                </article>
+
+                <article class="pista-card">
+                    <img src="https://voleapadel.es/img/volea_paddel_pista_cabecera.jpg" alt="Pista 3">
+                    <div class="pista-info">
+                        <h3>Pista 3</h3>
+                        <p><strong>Tipo:</strong> Indoor</p>
+                        <p><strong>Ubicación:</strong> Zona sur</p>
+                        <p><strong>Precio:</strong> 20 € / hora</p>
+                        <p><strong>Estado:</strong> Ocupada</p>
+                        <a href="reservas.html" class="button-secondary">Ver horarios</a>
+                    </div>
+                </article>
+
+                <article class="pista-card">
+                    <img src="https://unbuendiaenmadrid.com/wp-content/uploads/2022/03/carrusel_club_0002_07.jpg" alt="Pista 4">
+                    <div class="pista-info">
+                        <h3>Pista 4</h3>
+                        <p><strong>Tipo:</strong> Outdoor</p>
+                        <p><strong>Ubicación:</strong> Zona este</p>
+                        <p><strong>Precio:</strong> 16 € / hora</p>
+                        <p><strong>Estado:</strong> Disponible</p>
+                        <a href="reservas.html" class="button-primary">Reservar</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="info-pistas">
+            <h2>Información adicional</h2>
+
+            <div class="info-grid">
+                <div class="info-box">
+                    <h3>Tipos de pista</h3>
+                    <p>Disponemos de pistas indoor y outdoor para adaptarnos a cualquier preferencia.</p>
+                </div>
+
+                <div class="info-box">
+                    <h3>Reserva rápida</h3>
+                    <p>Consulta la disponibilidad por fecha y hora antes de confirmar tu reserva.</p>
+                </div>
+
+                <div class="info-box">
+                    <h3>Comodidad</h3>
+                    <p>Todas las pistas están preparadas para ofrecer una experiencia cómoda y segura.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p><strong>Club de Pádel Comillas.</strong></p>
+            <p>Tu aplicación para reservar pistas de pádel fácilmente.</p>
+            <p>Horario del club: 08:00 - 23:00</p>
+            
+        </div>
+    </footer>
+    <script src="js/pistas.js"></script>
+</body>
+</html>

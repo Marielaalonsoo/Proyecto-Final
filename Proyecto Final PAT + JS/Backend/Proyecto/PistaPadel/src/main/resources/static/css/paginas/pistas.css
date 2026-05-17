@@ -1,0 +1,76 @@
+.filtros-pistas,
+.lista-pistas,
+.info-pistas {
+    margin-bottom: 40px;
+}
+
+.filtros-pistas h2,
+.lista-pistas h2,
+.info-pistas h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.form-filtros {
+    padding: 25px;
+}
+
+.filtros-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.filtro-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.filtro-group label {
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.filtro-group input,
+.filtro-group select {
+    padding: 10px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.pistas-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.pista-card {
+    overflow: hidden;
+}
+
+.pista-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.pista-info {
+    padding: 20px;
+}
+
+.pista-info h3 {
+    font-size: 24px;
+    margin-bottom: 12px;
+    color: #1d4ed8;
+}
+
+.pista-info p {
+    margin-bottom: 8px;
+    color: #374151;
+}
+
+.pista-info a {
+    margin-top: 12px;
+}

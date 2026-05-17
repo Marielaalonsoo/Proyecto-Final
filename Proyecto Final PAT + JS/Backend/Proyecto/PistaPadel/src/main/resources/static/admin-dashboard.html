@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Panel de Administración</title>
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/paginas/admin-dash.css" />
+</head>
+<body>
+    <header class="admin-header">
+        <div class="container header-flex">
+            <div class="logo-box">
+                <h1 class="logo-text"> Mododo Administrador</h1>
+            </div>
+
+            <nav class="navbar">
+                <ul class="nav-list">
+                    <li><a href="admin-dashboard.html" class="nav-link active">Panel de Administración</a></li>
+                    <li><a href="admin-courts.html" class="nav-link">Pistas</a></li>
+                    <li><a href="admin-users.html" class="nav-link">Usuarios</a></li>
+                    <li><a href="admin-reservations.html" class="nav-link">Reservas</a></li>
+                    <li><a href="index.html" class="nav-link">Volver a la pagina </a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="admin-main">
+        <section class="container page-header">
+            <h2>Panel de Administración</h2>
+            <p>Gestiona pistas, usuarios y reservas del sistema.</p>
+        </section>
+
+        <section class="container stats-grid">
+            <article class="stat-card">
+                <h3>Gestionar pistas</h3>
+                <p class="stat-number" id="totalCourts"></p>
+                <a href="admin-courts.html" class="button-primary">Gestionar pistas</a>
+            </article>
+
+            <article class="stat-card">
+                <h3>Gestionar usuarios</h3>
+                <p class="stat-number" id="totalUsers"></p>
+                <a href="admin-users.html" class="button-primary">Gestionar usuarios</a>
+            </article>
+
+            <article class="stat-card">
+                <h3>Gestionar Reservas</h3>
+                <p class="stat-number" id="todayReservations"></p>
+                <a href="admin-reservations.html" class="button-primary">Ver reservas</a>
+            </article>
+
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p><strong>Club de Pádel Comillas.</strong></p>
+            <p>Panel de administración del sistema.</p>
+            <p>Horario del club: 08:00 - 23:00</p>
+        </div>
+    </footer>
+    <script src="js/admin-dashboard.js"></script>
+</body>
+</html>

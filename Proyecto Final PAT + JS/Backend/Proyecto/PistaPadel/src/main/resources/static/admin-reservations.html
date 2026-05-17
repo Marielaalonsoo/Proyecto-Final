@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Reservas</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/paginas/admin-reservations.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">
+            <h1>Club de Pádel Comillas Admin</h1>
+        </div>
+
+        <nav class="nav">
+            <a href="admin-dashboard.html">Dashboard</a>
+            <a href="admin-courts.html">Pistas</a>
+            <a href="admin-users.html">Usuarios</a>
+            <a href="admin-reservations.html">Reservas</a>
+            <a href="index.html">Volver al sitio</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="pagina-titulo">
+            <h2>Gestión de Reservas</h2>
+            <p>
+                Consulta reservas por fecha, pista o usuario y accede a su información detallada.
+            </p>
+        </section>
+
+        <section class="reservations-filters">
+            <div class="admin-card">
+                <h3>Filtros</h3>
+
+                <form id="filterReservationsForm" class="admin-form filters-grid">
+                    <div class="form-group">
+                        <label for="reservationDate">Fecha</label>
+                        <input type="date" id="reservationDate" name="date">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="reservationCourtId">ID pista</label>
+                        <input type="number" id="reservationCourtId" name="courtId" placeholder="Ej: 2">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="reservationUserId">ID usuario</label>
+                        <input type="number" id="reservationUserId" name="userId" placeholder="Ej: 5">
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="button-primary">Buscar reservas</button>
+                        <button type="reset" class="button-secondary" id="resetReservationsFiltersBtn">Limpiar filtros</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <section class="reservations-list">
+            <div class="admin-card">
+                <div class="section-header">
+                    <h3>Listado de reservas</h3>
+                    <button class="button-secondary" id="loadReservationsBtn">Actualizar lista</button>
+                </div>
+
+                <div class="table-wrapper">
+                    <table class="admin-table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>ID Usuario</th>
+                                <th>Usuario</th>
+                                <th>ID Pista</th>
+                                <th>Pista</th>
+                                <th>Fecha</th>
+                                <th>Hora inicio</th>
+                                <th>Hora fin</th>
+                                <th>Duración</th>
+                                <th>Estado</th>
+                                <th>Fecha creación</th>
+                            </tr>
+                        </thead>
+                        <tbody id="reservationsTableBody">
+                            <tr>
+                                <td colspan="11">Aquí se cargarán las reservas.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <section class="reservations-extra">
+            <div class="single-box">
+                <article class="admin-card">
+                    <h3>Detalle rápido de reserva</h3>
+
+                    <form id="searchReservationForm" class="admin-form">
+                        <div class="form-group">
+                            <label for="searchReservationId">ID reserva</label>
+                            <input type="number" id="searchReservationId" name="reservationId" placeholder="Ej: 12" required>
+                        </div>
+
+                        <button type="submit" class="button-primary">Ver detalle</button>
+                    </form>
+
+                    <div id="reservationDetailBox" class="detail-box">
+                        <p>Aquí se mostrará el detalle de la reserva seleccionada.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p><strong>Club de Pádel Comillas.</strong></p>
+            <p>Panel de administración del sistema.</p>
+            <p>Horario del club: 08:00 - 23:00</p>
+        </div>
+    </footer>
+    <script src="js/admin-reservations.js"></script>
+</body>
+</html>

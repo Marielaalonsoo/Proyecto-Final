@@ -1,0 +1,63 @@
+.login-section {
+    padding: 20px 0 60px 0;
+}
+
+.login-card {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+.login-form h3 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.form-text {
+    text-align: center;
+    color: #4b5563;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.login-form fieldset {
+    border: 1px solid #dbe2ea;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.login-form legend {
+    padding: 0 10px;
+    font-weight: bold;
+    color: #1d4ed8;
+}
+
+.login-form .form-group {
+    margin-bottom: 18px;
+}
+
+.login-form .form-group:last-child {
+    margin-bottom: 0;
+}
+
+.form-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+
+.login-extra {
+    margin-top: 25px;
+    text-align: center;
+    border-top: 1px solid #e5e7eb;
+    padding-top: 20px;
+}
+
+.login-extra p {
+    margin-bottom: 15px;
+    color: #374151;
+    font-size: 16px;
+}

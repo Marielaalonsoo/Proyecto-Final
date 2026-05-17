@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">
+            <h1>Club de Pádel Comillas</h1>
+        </div>
+
+        <nav class="nav">
+            <a href="index.html">Inicio</a>
+            <a href="pistas.html">Pistas</a>
+            <a href="reservas.html">Reservas</a>
+            <a href="profile.html">Perfil</a>
+            <a href="login.html">Iniciar sesión</a>
+            <a href="register.html" class="nav-button">Registrarse</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="intro">
+            <div class="intro-text">
+                <h2>Reserva tu pista de pádel de forma rápida y sencilla</h2>
+                <p>
+                    Consulta la disponibilidad, gestiona tus reservas y accede a toda la
+                    información del club desde una única plataforma.
+                    Una manera de hacer las cosas para que tu única preocupación sea no 
+                    olvidarte la raqueta. 
+                </p>
+
+                <div class="intro-buttons">
+                    <a href="reservas.html" class="button-primary">Ver reservas</a>
+                    <a href="login.html" class="button-secondary">Iniciar sesión</a>
+                </div>
+            </div>
+
+            <div class="intro-image">
+                <img src="https://res.cloudinary.com/playtomic/image/upload/c_limit,w_1600/v1/pro/tenants/da78dd3c-43b3-11e8-8674-52540049669c/ciudaddelaraqueta_0001" alt="Pista de pádel">
+            </div>
+        </section>
+
+        <section class="caracteristicas">
+            <h2>¿Qué puedes hacer en la aplicación?</h2>
+
+            <div class="caracteristicas-grid">
+                <article class="caracteristicas-card">
+                    <h3>Consultar disponibilidad</h3>
+                    <p>
+                        Revisa qué pistas están libres y encuentra el mejor horario para jugar.
+                    </p>
+                </article>
+
+                <article class="caracteristicas-card">
+                    <h3>Gestionar reservas</h3>
+                    <p>
+                        Crea, consulta, modifica o cancela tus reservas de forma cómoda y sencilla.
+                    </p>
+                </article>
+
+                <article class="caracteristicas-card">
+                    <h3>Acceder a tu perfil</h3>
+                    <p>
+                        Consulta tus datos personales y mantén tu información siempre actualizada.
+                        Podrás acceder a tu perfil incluso si te cambias de nombre. 
+                        Nos tomamos en serio la inclusión y respetamos tus decisiones. 
+                    </p>
+                </article>
+
+                <article class="caracteristicas-card">
+                    <h3>Funciones de administrador</h3>
+                    <p>
+                        Los administradores pueden gestionar usuarios, pistas y reservas del sistema.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <section class="info">
+            <h2>Información general del club</h2>
+
+            <div class="info-grid">
+                <div class="info-box">
+                    <h3>Horario</h3>
+                    <p>Lunes a domingo</p>
+                    <p>08:00 - 23:00</p>
+                </div>
+
+                <div class="info-box">
+                    <h3>Pistas disponibles</h3>
+                    <p id="totalPistasInicio">Cargando pistas...</p>
+                    <p>Indoor y outdoor</p>
+                </div>
+
+                <div class="info-box">
+                    <h3>Reservas</h3>
+                    <p>Consulta por fecha y hora</p>
+                    <p>Gestión sencilla y rápida</p>
+                </div>
+
+                <div class="info-box">
+                    <h3>Usuarios</h3>
+                    <p>Registro e inicio de sesión</p>
+                    <p>Perfil personalizado</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="auth">
+            <h2>Empieza a jugar hoy</h2>
+            <p>
+                Regístrate o inicia sesión para comenzar a gestionar tus reservas en App Pádel.
+            </p>
+
+            <div class="auth-buttons">
+                <a href="register.html" class="button-primary">Registrarse</a>
+                <a href="login.html" class="button-secondary">Iniciar sesión</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p><strong>Club de Pádel Comillas.</strong></p>
+            <p>Tu aplicación para reservar pistas de pádel fácilmente.</p>
+            <p>Horario del club: 08:00 - 23:00</p>
+            
+        </div>
+    </footer>
+    <script src="js/index.js"></script>
+</body>
+</html>

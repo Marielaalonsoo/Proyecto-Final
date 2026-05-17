@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/paginas/register.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">
+            <h1>Club de Pádel Comillas</h1>
+        </div>
+
+        <nav class="nav">
+            <a href="index.html">Inicio</a>
+            <a href="pistas.html">Pistas</a>
+            <a href="reservas.html">Reservas</a>
+            <a href="profile.html">Perfil</a>
+            <a href="login.html">Iniciar sesión</a>
+            <a href="register.html" class="nav-button">Registrarse</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="pagina-titulo">
+            <h2>Crear una cuenta</h2>
+            <p>
+                Regístrate para empezar a reservar pistas y gestionar tu actividad dentro del club.
+            </p>
+        </section>
+
+        <section class="register-section">
+            <div class="register-card card">
+                <form id="registerForm" class="register-form">
+                    <h3>Nueva cuenta</h3>
+                    <p class="form-text">
+                        Completa el formulario con tus datos personales.
+                    </p>
+                    <div id="registerMensaje" class="message"></div>
+
+                    <fieldset>
+                        <legend>Introduce tus datos</legend>
+
+                        <div class="register-grid">
+                            <div class="form-group">
+                                <label for="nombre">Nombre</label>
+                                <input type="text" id="nombre" name="nombre" required placeholder="Introduce tu nombre">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="apellidos">Apellidos</label>
+                                <input type="text" id="apellidos" name="apellidos" placeholder="Introduce tus apellidos">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required placeholder="Introduce tu correo">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="telefono">Teléfono</label>
+                                <input type="tel" id="telefono" name="telefono" placeholder="Introduce tu teléfono">
+                            </div>
+
+                            <div class="form-group form-group-full">
+                                <label for="password">Contraseña</label>
+                                <input type="password" id="password" name="password" required placeholder="Introduce una contraseña segura">
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <div class="form-button">
+                        <button type="submit" class="button-primary">Crear cuenta</button>
+                    </div>
+                </form>
+
+                <div class="register-extra">
+                    <p>¿Ya tienes cuenta?</p>
+                    <a href="login.html" class="button-secondary">Iniciar sesión</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p><strong>Club de Pádel Comillas.</strong></p>
+            <p>Tu aplicación para reservar pistas de pádel fácilmente.</p>
+            <p>Horario del club: 08:00 - 23:00</p>
+        </div>
+    </footer>
+    <script src="js/register.js"></script>
+</body>
+</html>

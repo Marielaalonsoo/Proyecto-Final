@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Usuarios</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/paginas/admin-user.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">
+            <h1>Club de Pádel Comillas Admin</h1>
+        </div>
+
+        <nav class="nav">
+            <a href="admin-dashboard.html">Dashboard</a>
+            <a href="admin-courts.html">Pistas</a>
+            <a href="admin-users.html">Usuarios</a>
+            <a href="admin-reservations.html">Reservas</a>
+            <a href="index.html">Volver al sitio</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="pagina-titulo">
+            <h2>Gestión de Usuarios</h2>
+            <p>
+                Consulta, filtra y edita la información de los usuarios registrados en el sistema.
+            </p>
+        </section>
+
+        <section class="users-filters">
+            <div class="admin-card">
+                <h3>Filtros de usuarios</h3>
+
+                <form id="filterUsersForm" class="admin-form">
+                    <div class="filters-grid">
+                        <div class="form-group">
+                            <label for="userId">ID usuario</label>
+                            <input type="number" id="userId" name="userId" placeholder="Ej: 5">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="userName">Nombre</label>
+                            <input type="text" id="userName" name="name" placeholder="Ej: María">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="userEmail">Email</label>
+                            <input type="email" id="userEmail" name="email" placeholder="Ej: usuario@email.com">
+                        </div>
+                    </div>
+
+                    <div class="form-actions filters-actions">
+                        <button type="submit" class="button-primary">Buscar usuarios</button>
+                        <button type="reset" class="button-secondary" id="resetUsersFiltersBtn">Limpiar filtros</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <section class="users-list">
+            <div class="admin-card">
+                <div class="section-header">
+                    <h3>Listado de usuarios</h3>
+                    <button type="button" class="button-secondary" id="loadUsersBtn">Actualizar lista</button>
+                </div>
+
+                <div class="table-wrapper">
+                    <table class="admin-table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Nombre</th>
+                                <th>Apellido</th>
+                                <th>Email</th>
+                                <th>Teléfono</th>
+                                <th>Rol</th>
+                                <th>Estado</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody id="usersTableBody">
+                            <tr>
+                                <td colspan="8" class="table-empty">Aquí se cargarán los usuarios.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <section class="users-extra">
+            <div class="users-grid">
+                <article class="admin-card">
+                    <h3>Editar usuario</h3>
+
+                    <form id="editUserForm" class="admin-form">
+                        <div class="form-group">
+                            <label for="editUserId">ID usuario</label>
+                            <input type="number" id="editUserId" name="userId" placeholder="Selecciona un usuario de la tabla" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="editUserName">Nombre</label>
+                            <input type="text" id="editUserName" name="nombre" placeholder="Nuevo nombre">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="editUserLastName">Apellido</label>
+                            <input type="text" id="editUserLastName" name="apellido" placeholder="Nuevo apellido">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="editUserEmail">Email</label>
+                            <input type="email" id="editUserEmail" name="email" placeholder="Nuevo email">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="editUserPhone">Teléfono</label>
+                            <input type="tel" id="editUserPhone" name="telefono" placeholder="Nuevo teléfono">
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="submit" class="button-primary">Guardar cambios</button>
+                        </div>
+                    </form>
+                </article>
+
+                <article class="admin-card">
+                    <h3>Detalle rápido de usuario</h3>
+
+                    <form id="searchUserForm" class="admin-form">
+                        <div class="form-group">
+                            <label for="searchUserId">ID usuario</label>
+                            <input type="number" id="searchUserId" name="searchUserId" placeholder="Ej: 5" required>
+                        </div>
+
+                        <button type="submit" class="button-primary detail-button">Ver detalle</button>
+                    </form>
+
+                    <div id="userDetailBox" class="detail-box">
+                        <p>Aquí se mostrará la información del usuario seleccionado.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p><strong>Club de Pádel Comillas.</strong></p>
+            <p>Panel de administración del sistema.</p>
+            <p>Horario del club: 08:00 - 23:00</p>
+        </div>
+    </footer>
+    <script src="js/admin-users.js"></script>
+</body>
+</html>

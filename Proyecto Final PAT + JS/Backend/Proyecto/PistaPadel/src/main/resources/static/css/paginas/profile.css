@@ -1,0 +1,175 @@
+.profile-section {
+    padding: 40px 0 60px 0;
+}
+
+.profile-card {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 32px;
+    background: #ffffff;
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+}
+
+.profile-card h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    text-align: center;
+    color: #0b1b46;
+}
+
+.form-text {
+    text-align: center;
+    color: #3f5673;
+    margin-bottom: 35px;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px 24px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 10px;
+    font-weight: 700;
+    font-size: 15px;
+    color: #0b1b46;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 16px 18px;
+    border: 1px solid #c8d1df;
+    border-radius: 12px;
+    font-size: 15px;
+    background-color: #ffffff;
+    box-sizing: border-box;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #2f5be7;
+    box-shadow: 0 0 0 3px rgba(47, 91, 231, 0.12);
+}
+
+.form-group input:disabled {
+    background-color: #f5f7fb;
+    color: #5b6472;
+}
+
+.full-width {
+    grid-column: 1 / -1;
+}
+
+.profile-button {
+    display: flex;
+    gap: 14px;
+    margin-top: 8px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.profile-button button {
+    padding: 14px 24px;
+    border-radius: 12px;
+    border: 2px solid #0b1b46;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.15s ease, opacity 0.15s ease, background-color 0.2s ease;
+}
+
+.profile-button button:hover {
+    transform: translateY(-1px);
+}
+
+.profile-button button[type="submit"] {
+    background-color: #2f5be7;
+    color: #ffffff;
+}
+
+.profile-button button[type="submit"]:hover {
+    background-color: #2449bf;
+}
+
+#myReservationsBtn {
+    background-color: #ffffff;
+    color: #0b1b46;
+}
+
+#myReservationsBtn:hover {
+    background-color: #f2f5fb;
+}
+
+.secondary {
+    background-color: #ffffff;
+    color: #b42318;
+    border-color: #b42318;
+}
+
+.secondary:hover {
+    background-color: #fff1f0;
+}
+
+.message {
+    min-height: 22px;
+    margin-bottom: 18px;
+    padding: 12px 14px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.message.success {
+    background-color: #dcfce7;
+    color: #166534;
+    border: 1px solid #bbf7d0;
+}
+
+.message.error {
+    background-color: #fee2e2;
+    color: #991b1b;
+    border: 1px solid #fecaca;
+}
+
+.message.info {
+    background-color: #dbeafe;
+    color: #1e40af;
+    border: 1px solid #bfdbfe;
+}
+
+@media (max-width: 768px) {
+    .profile-card {
+        padding: 24px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .full-width {
+        grid-column: auto;
+    }
+
+    .profile-card h2 {
+        font-size: 24px;
+    }
+
+    .profile-button {
+        flex-direction: column;
+    }
+
+    .profile-button button {
+        width: 100%;
+    }
+}

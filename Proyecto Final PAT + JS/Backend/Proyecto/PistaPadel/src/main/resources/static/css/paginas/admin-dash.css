@@ -1,0 +1,141 @@
+/* CONTENEDOR GENERAL */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* HEADER DEL PANEL */
+.admin-header {
+    background-color: #0f172a;
+    color: white;
+    padding: 20px 0;
+}
+
+.header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.logo-text {
+    color: white;
+    font-size: 30px;
+}
+
+/* NAVEGACION */
+.navbar {
+    display: flex;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 18px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.nav-link {
+    color: white;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+    color: #93c5fd;
+}
+
+.nav-link.active {
+    color: #93c5fd;
+    font-weight: bold;
+}
+
+/* MAIN */
+.admin-main {
+    padding: 40px 0 60px 0;
+}
+
+/* CABECERA DE PAGINA */
+.page-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.page-header h2 {
+    font-size: 34px;
+    margin-bottom: 10px;
+    color: #111827;
+}
+
+.page-header p {
+    font-size: 17px;
+    color: #4b5563;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* GRID DE ESTADISTICAS */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+/* TARJETAS */
+.stat-card {
+    background-color: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    text-align: center;
+}
+
+.stat-card h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #1d4ed8;
+}
+
+.stat-number {
+    font-size: 40px;
+    font-weight: bold;
+    color: #111827;
+    margin-bottom: 20px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .header-flex {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-list {
+        gap: 12px;
+    }
+
+    .logo-text {
+        font-size: 26px;
+    }
+
+    .page-header h2 {
+        font-size: 28px;
+    }
+
+    .stat-number {
+        font-size: 32px;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+}

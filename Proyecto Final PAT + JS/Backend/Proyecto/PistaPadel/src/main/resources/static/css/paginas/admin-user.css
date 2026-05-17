@@ -1,0 +1,307 @@
+/* =========================
+   PAGINA USUARIOS - ESTILO ADMIN
+   ========================= */
+
+.users-filters,
+.users-list,
+.users-extra {
+    margin-bottom: 36px;
+}
+
+/* TARJETA GENERAL */
+.admin-card {
+    background-color: #ffffff;
+    padding: 28px;
+    border-radius: 22px;
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+    border: 1px solid #e5e7eb;
+}
+
+.admin-card h3 {
+    font-size: 28px;
+    line-height: 1.2;
+    margin-bottom: 24px;
+    color: #111827;
+}
+
+/* FORMULARIOS */
+.admin-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* FILTROS */
+.filters-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.users-filters .form-group label,
+.users-extra .form-group label {
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #111827;
+}
+
+.users-filters .form-group input,
+.users-filters .form-group select,
+.users-extra .form-group input,
+.users-extra .form-group select {
+    width: 100%;
+    min-height: 56px;
+    padding: 14px 16px;
+    border: 1px solid #cbd5e1;
+    border-radius: 12px;
+    font-size: 16px;
+    background-color: #ffffff;
+    color: #111827;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.users-filters .form-group input::placeholder,
+.users-extra .form-group input::placeholder {
+    color: #9ca3af;
+}
+
+.users-filters .form-group input:focus,
+.users-filters .form-group select:focus,
+.users-extra .form-group input:focus,
+.users-extra .form-group select:focus {
+    outline: none;
+    border-color: #1d4ed8;
+    box-shadow: 0 0 0 4px rgba(29, 78, 216, 0.12);
+}
+
+/* BOTONES */
+.form-actions {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.filters-actions {
+    margin-top: 8px;
+}
+
+.button-primary,
+.button-secondary,
+.button-danger {
+    min-height: 52px;
+    padding: 12px 22px;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.button-danger {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #dc2626;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.button-danger:hover {
+    background-color: #b91c1c;
+    transform: translateY(-1px);
+}
+
+.button-primary:hover,
+.button-secondary:hover {
+    transform: translateY(-1px);
+}
+
+/* LISTADO */
+.users-list .admin-card {
+    padding: 28px 28px 24px;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 18px;
+    flex-wrap: wrap;
+    margin-bottom: 22px;
+}
+
+.section-header h3 {
+    margin-bottom: 0;
+}
+
+.section-header .button-secondary {
+    white-space: nowrap;
+}
+
+/* TABLA */
+.table-wrapper {
+    overflow-x: auto;
+    border: 1px solid #dbe3ee;
+    border-radius: 18px;
+    background-color: #ffffff;
+}
+
+.admin-table {
+    width: 100%;
+    min-width: 980px;
+    border-collapse: collapse;
+    background-color: #ffffff;
+}
+
+.admin-table thead {
+    background-color: #eef4ff;
+}
+
+.admin-table th,
+.admin-table td {
+    padding: 18px 16px;
+    text-align: left;
+    border-bottom: 1px solid #e5e7eb;
+    font-size: 15px;
+    vertical-align: middle;
+}
+
+.admin-table th {
+    color: #1e3a8a;
+    font-size: 15px;
+    font-weight: 800;
+    letter-spacing: 0.2px;
+}
+
+.admin-table td {
+    color: #374151;
+}
+
+.admin-table tbody tr {
+    transition: background-color 0.2s ease;
+}
+
+.admin-table tbody tr:hover {
+    background-color: #f8fbff;
+}
+
+.admin-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.table-empty {
+    padding: 24px 16px;
+    color: #6b7280;
+    text-align: left;
+    font-size: 16px;
+}
+
+/* BLOQUE INFERIOR */
+.users-grid {
+    display: grid;
+    grid-template-columns: 1.35fr 0.95fr;
+    gap: 24px;
+    align-items: start;
+}
+
+.users-grid .admin-card {
+    height: 100%;
+}
+
+.users-grid .admin-card:first-child .admin-form {
+    gap: 18px;
+}
+
+/* DETALLE */
+.detail-box {
+    margin-top: 18px;
+    padding: 18px;
+    background-color: #f8fbff;
+    border: 1px solid #dbe7f5;
+    border-radius: 16px;
+    min-height: 150px;
+}
+
+.detail-box p {
+    color: #4b5563;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.detail-button {
+    width: 100%;
+}
+
+/* AJUSTES VISUALES EXTRA */
+.users-list .admin-card,
+.users-filters .admin-card,
+.users-extra .admin-card {
+    position: relative;
+}
+
+.users-list .admin-card::before,
+.users-filters .admin-card::before,
+.users-extra .admin-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 22px;
+    pointer-events: none;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+    .filters-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .users-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .admin-card {
+        padding: 22px;
+        border-radius: 18px;
+    }
+
+    .admin-card h3 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    .filters-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .section-header {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .section-header .button-secondary {
+        width: 100%;
+        text-align: center;
+    }
+
+    .form-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .form-actions .button-primary,
+    .form-actions .button-secondary,
+    .form-actions .button-danger {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .admin-table {
+        min-width: 820px;
+    }
+}

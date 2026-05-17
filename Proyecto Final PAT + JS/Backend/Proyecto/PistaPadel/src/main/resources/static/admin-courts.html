@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Pistas</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/paginas/admin-courts.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">
+            <h1>Club de Pádel Comillas Admin</h1>
+        </div>
+
+        <nav class="nav">
+            <a href="admin-dashboard.html">Dashboard</a>
+            <a href="admin-courts.html">Pistas</a>
+            <a href="admin-users.html">Usuarios</a>
+            <a href="admin-reservations.html">Reservas</a>
+            <a href="index.html">Volver al sitio</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="pagina-titulo">
+            <h2>Gestión de Pistas</h2>
+            <p>
+                Crea, edita y desactiva pistas del sistema de forma sencilla.
+            </p>
+        </section>
+
+        <section class="courts-forms">
+            <div class="courts-grid">
+                <article class="admin-card">
+                    <h3>Nueva pista</h3>
+
+                    <form id="createCourtForm" class="admin-form">
+                        <div class="form-group">
+                            <label for="courtName">Nombre</label>
+                            <input type="text" id="courtName" name="nombre" placeholder="Ej: Pista Central" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="courtLocation">Ubicación</label>
+                            <input type="text" id="courtLocation" name="ubicacion" placeholder="Ej: Zona Norte" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="courtPrice">Precio por hora</label>
+                            <input type="number" id="courtPrice" name="precioHora" placeholder="Ej: 20" min="0" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="courtCreatedDate">Fecha de alta</label>
+                            <input type="date" id="courtCreatedDate" name="fechaAlta" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="courtActive">Estado</label>
+                            <select id="courtActive" name="activa" required>
+                                <option value="true">Activa</option>
+                                <option value="false">Inactiva</option>
+                            </select>
+                        </div>
+
+                        <button type="submit" class="button-primary">Crear pista</button>
+                    </form>
+                </article>
+
+                <article class="admin-card">
+                    <h3>Editar pista</h3>
+
+                    <form id="editCourtForm" class="admin-form">
+                        <div class="form-group">
+                            <label for="editCourtId">ID pista</label>
+                            <input type="number" id="editCourtId" name="courtId" placeholder="Selecciona una pista de la tabla" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="editCourtName">Nombre</label>
+                            <input type="text" id="editCourtName" name="nombre" placeholder="Nuevo nombre">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="editCourtLocation">Ubicación</label>
+                            <input type="text" id="editCourtLocation" name="ubicacion" placeholder="Nueva ubicación">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="editCourtPrice">Precio por hora</label>
+                            <input type="number" id="editCourtPrice" name="precioHora" min="0" placeholder="Nuevo precio">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="editCourtActive">Estado</label>
+                            <select id="editCourtActive" name="activa">
+                                <option value="">No cambiar</option>
+                                <option value="true">Activa</option>
+                                <option value="false">Inactiva</option>
+                            </select>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="submit" class="button-primary">Guardar cambios</button>
+                            <button type="button" class="button-danger" id="deleteCourtBtn">Desactivar / borrar pista</button>
+                        </div>
+                    </form>
+                </article>
+            </div>
+        </section>
+
+        <section class="courts-list">
+            <div class="admin-card">
+                <div class="section-header">
+                    <h3>Listado de pistas</h3>
+
+                    <div class="filters-inline">
+                        <label for="filterCourtStatus">Estado</label>
+                        <select id="filterCourtStatus">
+                            <option value="">Todas</option>
+                            <option value="true">Activas</option>
+                            <option value="false">Inactivas</option>
+                        </select>
+
+                        <button class="button-secondary" id="loadCourtsBtn">Actualizar lista</button>
+                    </div>
+                </div>
+
+                <div class="table-wrapper">
+                    <table class="admin-table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Nombre</th>
+                                <th>Ubicación</th>
+                                <th>Precio/hora</th>
+                                <th>Estado</th>
+                                <th>Fecha alta</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody id="courtsTableBody">
+                            <tr>
+                                <td colspan="7">Aquí se cargarán las pistas.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p><strong>Club de Pádel Comillas.</strong></p>
+            <p>Panel de administración del sistema.</p>
+            <p>Horario del club: 08:00 - 23:00</p>
+        </div>
+    </footer>
+    <script src="js/admin-courts.js"></script>
+</body>
+</html>

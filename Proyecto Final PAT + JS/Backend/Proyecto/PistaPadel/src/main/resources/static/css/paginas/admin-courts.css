@@ -1,0 +1,196 @@
+/* SECCION DE FILTROS */
+.users-filters {
+    margin-bottom: 40px;
+}
+
+/* TARJETA GENERAL */
+.admin-card {
+    background-color: white;
+    padding: 28px;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* TITULOS */
+.admin-card h3 {
+    font-size: 28px;
+    margin-bottom: 22px;
+    color: #111827;
+}
+
+/* FORMULARIOS */
+.admin-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+/* GRID DE FILTROS */
+.filters-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    align-items: end;
+}
+
+/* LISTADO */
+.users-list {
+    margin-bottom: 40px;
+}
+
+/* CABECERA DEL BLOQUE */
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+/* TABLA */
+.table-wrapper {
+    overflow-x: auto;
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+}
+
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 1000px;
+    background-color: white;
+}
+
+.admin-table thead {
+    background-color: #eff6ff;
+}
+
+.admin-table th,
+.admin-table td {
+    text-align: left;
+    padding: 14px 12px;
+    border-bottom: 1px solid #e5e7eb;
+    font-size: 15px;
+}
+
+.admin-table th {
+    color: #1e3a8a;
+    font-weight: bold;
+}
+
+.admin-table td {
+    color: #374151;
+}
+
+/* SECCION INFERIOR */
+.users-extra {
+    margin-bottom: 40px;
+}
+
+.users-grid {
+    display: grid;
+    grid-template-columns: 1.3fr 0.9fr;
+    gap: 24px;
+    align-items: start;
+}
+
+/* ACCIONES */
+.form-actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 6px;
+}
+
+/* BOTON ROJO */
+.button-danger {
+    display: inline-block;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    background-color: #dc2626;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.button-danger:hover {
+    background-color: #b91c1c;
+}
+
+/* CAJA DETALLE */
+.detail-box {
+    margin-top: 20px;
+    padding: 18px;
+    background-color: #f8fafc;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+   
+}
+
+.detail-box p {
+    color: #374151;
+    font-size: 16px;
+}
+
+/* MEJORA VISUAL DE INPUTS Y SELECTS SOLO EN ESTA PAGINA */
+.users-extra .form-group input,
+.users-extra .form-group select,
+.users-filters .form-group input {
+    width: 100%;
+}
+
+/* PARA QUE EL BLOQUE DE EDITAR NO SE VEA TAN ETERNO */
+.users-grid .admin-card:first-child .admin-form {
+    gap: 16px;
+}
+
+/* PARA DAR MAS PRESENCIA AL BOTON DE ACTUALIZAR */
+.section-header .button-secondary {
+    white-space: nowrap;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+    .filters-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .users-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .admin-card {
+        padding: 22px;
+    }
+
+    .admin-card h3 {
+        font-size: 22px;
+    }
+
+    .filters-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .form-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .form-actions .button-primary,
+    .form-actions .button-secondary,
+    .form-actions .button-danger {
+        width: 100%;
+        text-align: center;
+    }
+}

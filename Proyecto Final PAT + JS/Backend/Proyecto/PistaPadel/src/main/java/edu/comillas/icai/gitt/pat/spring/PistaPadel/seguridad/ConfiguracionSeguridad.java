@@ -1,0 +1,66 @@
+package edu.comillas.icai.gitt.pat.spring.PistaPadel.seguridad;
+
+import edu.comillas.icai.gitt.pat.spring.PistaPadel.Modelo.Usuario;
+import edu.comillas.icai.gitt.pat.spring.PistaPadel.Repositorio.RepoUsuario;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.security.config.Customizer;
+import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
+import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.web.SecurityFilterChain;
+
+@Configuration
+@EnableWebSecurity
+@EnableMethodSecurity
+public class ConfiguracionSeguridad {
+
+    @Bean
+    public SecurityFilterChain configuracion(HttpSecurity http) throws Exception {
+        http
+                .authorizeHttpRequests(auth -> auth
+                        .requestMatchers("/h2-console/**").permitAll()
+                        .requestMatchers(
+                                "/", "/index.html", "/login.html", "/register.html",
+                                "/pistas.html", "/reservas.html", "/profile.html",
+                                "/admin-dashboard.html", "/admin-courts.html",
+                                "/admin-users.html", "/admin-reservations.html",
+                                "/css/**", "/js/**", "/assets/**", "/favicon.ico"
+                        ).permitAll()
+                        .requestMatchers("/pistaPadel/health", "/pistaPadel/auth/register", "/pistaPadel/auth/login").permitAll()
+                        .anyRequest().authenticated()
+                )
+                .httpBasic(Customizer.withDefaults())
+                .csrf(csrf -> csrf.ignoringRequestMatchers("/pistaPadel/**", "/h2-console/**"))
+                .headers(headers -> headers.frameOptions(frame -> frame.sameOrigin()));
+
+        return http.build();
+    }
+
+    @Bean
+    public UserDetailsService usuarios(RepoUsuario repoUsuario) {
+        return username -> {
+            Usuario u = repoUsuario.findByEmailIgnoreCase(username)
+                    .orElseThrow(() -> new UsernameNotFoundException("Usuario no encontrado: " + username));
+
+            if (!u.isActivo()) {
+                throw new UsernameNotFoundException("Usuario inactivo: " + username);
+            }
+
+            return org.springframework.security.core.userdetails.User
+                    .withUsername(u.getEmail())
+                    .password(u.getPasswordHash())
+                    .roles(u.getRol().name())
+                    .build();
+        };
+    }
+
+    @Bean
+    public PasswordEncoder passwordEncoder() {
+        return new BCryptPasswordEncoder();
+    }
+}

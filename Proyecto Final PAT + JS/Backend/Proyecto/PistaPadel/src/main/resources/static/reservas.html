@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservas</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/paginas/reservas.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">
+            <h1>Club de Pádel Comillas</h1>
+        </div>
+
+        <nav class="nav">
+            <a href="index.html">Inicio</a>
+            <a href="pistas.html">Pistas</a>
+            <a href="reservas.html">Reservas</a>
+            <a href="profile.html">Perfil</a>
+            <a href="login.html">Iniciar sesión</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="pagina-titulo">
+            <h2>Gestión de reservas</h2>
+            <p>
+                Consulta la disponibilidad de las pistas y administra tus reservas de forma sencilla.
+                Todo a un click.
+            </p>
+        </section>
+
+        <section class="crear-reserva">
+            <h2>Crear nueva reserva</h2>
+
+            <form id="reservaForm" class="form-reserva card">
+                <div id="reservasMensaje" class="message"></div>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="pista">Pista</label>
+                        <select id="pista" name="pista">
+                            <option value="">Selecciona una pista</option>
+                            <option value="1">Pista 1</option>
+                            <option value="2">Pista 2</option>
+                            <option value="3">Pista 3</option>
+                            <option value="4">Pista 4</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="fecha">Fecha</label>
+                        <input type="date" id="fecha" name="fecha">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="hora">Hora de inicio</label>
+                        <input type="time" id="hora" name="hora">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="duracion">Duración</label>
+                        <select id="duracion" name="duracion">
+                            <option value="">Selecciona duración</option>
+                            <option value="60">60 minutos</option>
+                            <option value="90">90 minutos</option>
+                            <option value="120">120 minutos</option>
+                        </select>
+                    </div>
+                </div>
+
+                <button type="submit" class="button-primary">Reservar pista</button>
+            </form>
+        </section>
+
+        <section class="mis-reservas">
+            <h2>Mis reservas</h2>
+
+            <div id="reservasGrid" class="reservas-grid">
+                <article class="reserva-card card">
+                    <h3>Pista 1</h3>
+                    <p><strong>Fecha:</strong> 20/04/2026</p>
+                    <p><strong>Hora:</strong> 18:00</p>
+                    <p><strong>Duración:</strong> 90 minutos</p>
+                    <div class="reserva-botones">
+                        <a href="#" class="button-secondary">Modificar</a>
+                        <a href="#" class="button-primary">Cancelar</a>
+                    </div>
+                </article>
+
+                <article class="reserva-card">
+                    <h3>Pista 3</h3>
+                    <p><strong>Fecha:</strong> 22/04/2026</p>
+                    <p><strong>Hora:</strong> 20:00</p>
+                    <p><strong>Duración:</strong> 60 minutos</p>
+                    <div class="reserva-botones">
+                        <a href="#" class="button-secondary">Modificar</a>
+                        <a href="#" class="button-primary">Cancelar</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="info-reservas">
+            <h2>Información útil</h2>
+            <div class="info-grid">
+                <div class="info-box">
+                    <h3>Consulta de pistas</h3>
+                    <p>Puedes comprobar qué pistas están disponibles por fecha y hora.</p>
+                </div>
+
+                <div class="info-box">
+                    <h3>Gestión sencilla</h3>
+                    <p>Accede a tus reservas activas y modifícalas cuando lo necesites.</p>
+                </div>
+
+                <div class="info-box">
+                    <h3>Cancelaciones</h3>
+                    <p>Las reservas pueden cancelarse según la política establecida por el club.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p><strong>Club de Pádel Comillas.</strong></p>
+            <p>Tu aplicación para reservar pistas de pádel fácilmente.</p>
+            <p>Horario del club: 08:00 - 23:00</p>
+            
+        </div>
+    </footer>
+    <script src="js/reservas.js"></script>
+</body>
+</html>
