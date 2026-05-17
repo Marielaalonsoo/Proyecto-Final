@@ -2,19 +2,11 @@
 
 Proyecto unificado de backend y frontend para gestionar pistas y reservas de padel.
 
-## Como ejecutar
 
-Desde la carpeta raiz del proyecto:
+## Miembros: 
 
-```powershell
-mvn spring-boot:run
-```
+Mariela Alonso Morales, Andrés Guerrero Cabrera, Álvaro Amieva Bascarán y Pablo de la Cal Priede. 
 
-Despues abre el navegador en:
-
-```text
-http://localhost:8080/index.html
-```
 
 ## Estructura
 
@@ -25,7 +17,23 @@ http://localhost:8080/index.html
 - CSS: `src/main/resources/static/css`
 - JavaScript: `src/main/resources/static/js`
 
-El frontend ya esta dentro del backend, asi que el proyecto se ejecuta como una sola aplicacion Spring Boot.
+## Usuarios de prueba
+
+Para poder probar la aplicación se incluyen dos usuarios iniciales: un administrador y un usuario normal.
+
+
+**Administrador**
+
+Email: `admin@padel.com`  
+Contraseña: `admin`
+
+**Usuario normal**
+
+Email: `user@padel.com`  
+Contraseña: `user`
+
+Las contraseñas están almacenadas en la base de datos mediante `password_hash`.
+
 
 ## Endpoints principales
 
@@ -52,8 +60,5 @@ Todos los endpoints del backend usan el prefijo `/pistaPadel`.
 - `GET /pistaPadel/users/{userId}`
 - `PATCH /pistaPadel/users/{userId}`
 
-## Notas
 
-- El proyecto ya no necesita un repositorio Git separado para frontend y backend.
-- Se puede iniciar un repositorio Git nuevo desde esta carpeta raiz.
-- La autenticacion del backend usa Basic Auth; el frontend guarda las credenciales en `sessionStorage` mientras dura la sesion del navegador.
+
